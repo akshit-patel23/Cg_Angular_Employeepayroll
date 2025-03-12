@@ -1,0 +1,40 @@
+
+    <div class="employeetable">
+     
+      
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Profile Picture</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Salary</th>            
+            <th>Start Date</th>
+            <th>Department</th>
+            <th>Note</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for(list of data; track list.id){
+            <tr >
+              <td>{{list.employeeid}}</td>
+              <td><img src={{list.profilePic}} class="empimg"></td>
+              <td>{{list.name }}</td>
+              <td>{{list.gender }}</td>
+              <td>{{list.salary }}</td>
+              <td>{{list.startDate }}</td>
+              <td>{{list.department }}</td>
+              <td>{{list.note }}</td>
+              <td><a href="">Update</a>&nbsp;<button (click)="delete(list.employeeid)">Delete</button></td>
+            </tr>
+          }
+          
+        </tbody>
+      </table>
+  
+      
+      
+    </div>
+    
